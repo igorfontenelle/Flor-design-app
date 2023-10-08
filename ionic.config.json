@@ -1,0 +1,7 @@
+{
+  "name": "flor_design_app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
