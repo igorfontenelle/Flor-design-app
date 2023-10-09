@@ -1,28 +1,27 @@
-<style scoped>
-.home-page {
-  background-color: blue;
-}
-</style>
-
 <template>
-  <ion-page style="background-color: blue;">
+  <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Home Page</ion-title>
+        <ion-title class="titlePersonalized2">Flor Design</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <div>Home Page here</div>
-      <img src="@/assets/logo/Flor-design-logo-small.svg"/>
-      <img src="@/assets/figures/padrao-de-tecido.png" width="85" height="85"/>
-      <img src="@/assets/figures/cama-de-casal.png" width="85" height="85"/>
-      <img src="@/assets/figures/cama-de-solteiro.png" width="85" height="85"/>
-      <HelloWorld msg="Teste"/>
+      <div class="toolbar-in-line">Home Page here</div>
+      <OrderCard title="Lençois" subtitle="Luva, Casal, Solteiro" source="src/assets/figures/padrao-de-tecido.png" colorBackground="blue-pastel"></OrderCard>
+      <OrderCard title="Colchas Casal" subtitle="Box, Queen, King" source="src/assets/figures/cama-de-casal.png" colorBackground="brown-pastel"></OrderCard>
+      <OrderCard title="Colhas Solteiro" subtitle="Padrão, Solteirão" source="src/assets/figures/cama-de-solteiro.png" colorBackground="yellow-pastel"></OrderCard>
+      <OrderCard title="Cortinas" subtitle="Macho, Americana" source="src/assets/figures/cortinas.png" colorBackground="pink-pastel"></OrderCard>
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
   import { IonHeader, IonToolbar, IonTitle, IonContent, IonPage } from '@ionic/vue';
-  import HelloWorld from '@/components/HelloWorld.vue';
+  import OrderCard from '@/components/Cards/OrderCard.vue';
 </script>
+
+<style scoped>
+.titlePersonalized2{
+  background-color: pink;
+}
+</style>

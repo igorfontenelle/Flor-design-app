@@ -1,5 +1,5 @@
 <template>
-  <ion-app class="main-app">
+  <ion-app>
       <ion-router-outlet></ion-router-outlet>
   </ion-app>
 </template>
@@ -10,7 +10,5 @@
 </script>
 
 <style scoped>
-.main-app {
-  background-color: red !important ;
-}
+
 </style>
