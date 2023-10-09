@@ -26,7 +26,6 @@
     import { IonPage, IonTabs, IonRouterOutlet, IonTabBar, IonTabButton, IonLabel, IonIcon } from '@ionic/vue';
   
     import { listOutline } from 'ionicons/icons';
-    //import { playCircle } from 'ionicons/icons';
     import { homeOutline } from 'ionicons/icons';
     import { settingsOutline } from 'ionicons/icons';
   </script>
