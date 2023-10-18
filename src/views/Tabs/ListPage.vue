@@ -1,21 +1,21 @@
 <template>
-  <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title class="titlePersonalized">List Page</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <div>List Page here</div>
-      <img :src="'src/assets/vue.svg'" alt="Image"/>
-      <img src="@/assets/vue.svg" alt="Image"/>
-    </ion-content>
-  </ion-page>
+  <header-layout pageTitle="Lista de Encomendas">
+      <ion-list>
+        <ion-item router-link="/list/1">
+          Lençol 1
+        </ion-item>
+        <ion-item>
+          Lençol 2
+        </ion-item>
+        <ion-item>
+          Lençol 3
+        </ion-item>
+      </ion-list>
+    </header-layout>
 </template>
 
 <script setup lang="ts">
-  import { IonHeader, IonToolbar, IonTitle, IonContent, IonPage } from '@ionic/vue';
-
+  import { IonList, IonItem } from '@ionic/vue';
 </script>
 
 <style scoped>

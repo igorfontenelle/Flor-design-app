@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Flor Design</ion-title>
+        <ion-title class="titleHome">Flor Design</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
@@ -30,8 +30,14 @@
 
 <script setup lang="ts">
   import { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonGrid, IonRow, IonCol } from '@ionic/vue';
-  import OrderCard from '@/components/Cards/OrderCard.vue';
+  import OrderCard from '@/components/cards/OrderCard.vue';
 </script>
 
 <style scoped>
+.titleHome {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 </style>

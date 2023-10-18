@@ -24,6 +24,10 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('./views/Tabs/ListPage.vue'),
       },
       {
+        path: 'list/:id',
+        component: () => import('./views/order-details/OrderDetails.vue')
+      },
+      {
         path: 'settings',
         component: () => import('./views/Tabs/SettingsPage.vue'),
       },

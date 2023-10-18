@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import { IonicVue } from '@ionic/vue';
 
 import App from './App.vue';
+import Header from '@/components/header/Header.vue';
 import router from './router';
 
 /* Core CSS required for Ionic components to work properly */
@@ -25,6 +26,7 @@ import '@/theme/variables.css';
 //import '@/theme/core.css';
 
 const app = createApp(App).use(IonicVue).use(router);
+app.component('header-layout', Header);
 
 router.isReady().then(() => {
   app.mount('#app');
