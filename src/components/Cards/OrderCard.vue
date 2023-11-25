@@ -1,17 +1,23 @@
 <template>
-    <ion-card class="borderPersonalized" :color="colorBackground">
-        <div class="imageClass">
-            <img alt="Image" :src="source" width="85" height="85"/>
+    <ion-button class="borderPersonalized" :color="colorBackground">
+        <ion-grid class="grid-size">
+            <ion-row class="rowAlign">
+                <img alt="Image" :src="source" width="85" height="85"/>
+            </ion-row>
+            <ion-row class="wd-135 mg-top-10">
+                <ion-label class="btnTitle">{{ title }}</ion-label>
+            </ion-row>
+            <ion-row class="wd-135 mg-top-5">
+                <ion-label class="btnSubtitle"> {{ subtitle }}</ion-label> 
+            </ion-row>
+        </ion-grid>
+        <div >
         </div>
-        <ion-card-header class="cardHeader">
-            <ion-card-title class="cardTitle">{{ title }}</ion-card-title>
-            <ion-card-subtitle class="cardSubtitle"> {{ subtitle }}</ion-card-subtitle>
-        </ion-card-header>
-    </ion-card>
+    </ion-button>
 </template>
 
 <script setup lang="ts">
-import { IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle } from '@ionic/vue';
+import { IonButton, IonGrid, IonLabel } from '@ionic/vue';
 defineProps<{ title: string, subtitle: string, source: string, colorBackground: string }>()
 
 </script>
@@ -19,28 +25,41 @@ defineProps<{ title: string, subtitle: string, source: string, colorBackground: 
 <style scoped>
 .borderPersonalized {
     border: 1px solid black; 
-    border-radius: 15px;
-    width: 150px;
-    height: 150px;
+    border-radius: 4px;
+    width: 152px;
+    height: 152px;
+    text-transform: capitalize;
 }
 
-.imageClass {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-}
-
-.cardHeader {
-    padding: 10px 1em 0 1em;
-}
-.cardTitle {
+.btnTitle {
     font-size: 14px;
     font-weight: bold;
+    color: #161616;
 }
 
-.cardSubtitle {
+.btnSubtitle {
     font-size: 12px;
-    padding-top: 0px;
-    margin-top: 2px;
+    color: #454545;
+}
+
+.rowAlign {
+    display: flex; 
+    justify-content: center; 
+}
+
+.grid-size {
+    width: 140px;
+    height: 130px;
+}
+
+.wd-135 {
+    width: 135px;
+}
+.mg-top-10 {
+    margin-top: 10px;
+}
+
+.mg-top-5 {
+    margin-top: 5px;
 }
 </style>
