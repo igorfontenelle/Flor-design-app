@@ -12,5 +12,4 @@ export default interface FabricCostInterface {
     calculateAreaPurchased(): number;
     calculateSquareMeterCost(): number;
     calculateCostUsed(): number;
-    getFabricCost(): Fabric;
 }

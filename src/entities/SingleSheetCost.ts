@@ -42,10 +42,5 @@ export default class SingleSheetCost implements FabricCostInterface {
     }
     calculateCostUsed(): number {
         return this.calculateSquareMeterCost() * this.calculateAreaUsed();
-    }
-
-    getFabricCost(){
-        return this.fabricCost
-    }
-    
+    }    
 }
