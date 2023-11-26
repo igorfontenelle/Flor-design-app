@@ -20,6 +20,10 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('./views/Tabs/HomePage.vue'),
       },
       {
+        path: 'home/addsheet',
+        component: () => import('./views/Sheets/SheetsComponent.vue')
+      },
+      {
         path: 'list',
         component: () => import('./views/Tabs/ListPage.vue'),
       },

@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { IonButton, IonGrid, IonLabel } from '@ionic/vue';
+import { IonButton, IonRow, IonGrid, IonLabel } from '@ionic/vue';
 defineProps<{ title: string, subtitle: string, source: string, colorBackground: string }>()
 
 </script>

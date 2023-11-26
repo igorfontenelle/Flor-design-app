@@ -1,5 +1,5 @@
 <template>
-    <header-layout page-default-back-link="/list">
+    <header-layout pageTitle="Detalhes do pedido" page-default-back-link="/list">
         <h1>Hello Details</h1>
     </header-layout>
 </template>

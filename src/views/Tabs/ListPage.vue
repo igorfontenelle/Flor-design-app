@@ -1,13 +1,13 @@
 <template>
-  <header-layout pageTitle="Lista de Encomendas">
+  <header-layout pageTitle="Lista de Encomendas" pageDefaultBackLink="/home">
       <ion-list>
         <ion-item router-link="/list/1">
           Lençol 1
         </ion-item>
-        <ion-item>
+        <ion-item router-link="/list/2">
           Lençol 2
         </ion-item>
-        <ion-item>
+        <ion-item router-link="/list/3">
           Lençol 3
         </ion-item>
       </ion-list>
