@@ -6,8 +6,8 @@ type Fabric = {
     squareMeterCost: number, 
     totalCostUsed: number
 }
-export default class SingleSheetCost implements FabricCostInterface {
-    constructor(widthAreaUsed: number, heightAreaUsed: number, widthAreaPurchased: number, heightAreaPurchased: number, fabricPrice: number){
+export default class GloveSheetBed implements FabricCostInterface {
+    constructor(widthAreaUsed: number, heightAreaUsed: number, depthUsed: number, widthAreaPurchased: number, heightAreaPurchased: number, fabricPrice: number){
         if(!widthAreaPurchased){
             throw new Error('Largura comprada é inválida');
         }
@@ -19,6 +19,7 @@ export default class SingleSheetCost implements FabricCostInterface {
         }
         this.widthAreaUsed = widthAreaUsed;
         this.heightAreaUsed = heightAreaUsed;
+        this.depthUsed = depthUsed;
         this.widthAreaPurchased = widthAreaPurchased;
         this.heightAreaPurchased = heightAreaPurchased;
         this.fabricPrice = fabricPrice;
@@ -30,6 +31,7 @@ export default class SingleSheetCost implements FabricCostInterface {
     }
     private widthAreaUsed: number;
     private heightAreaUsed: number;
+    private depthUsed: number;
     private widthAreaPurchased: number;
     private heightAreaPurchased: number;
     private fabricPrice: number;
@@ -41,7 +43,8 @@ export default class SingleSheetCost implements FabricCostInterface {
     };
 
     calculateAreaUsed(): number {
-        return this.widthAreaUsed * this.heightAreaUsed;
+        console.log(`X: ${this.widthAreaUsed}, Y: ${this.heightAreaUsed}, Z: ${this.depthUsed}, TOTAL: ${this.widthAreaUsed * this.heightAreaUsed * this.depthUsed}`)
+        return this.widthAreaUsed * this.heightAreaUsed * this.depthUsed;
     }
     calculateAreaPurchased(): number {
         return this.widthAreaPurchased * this.heightAreaPurchased;

@@ -54,9 +54,13 @@
   import OrderCard from '@/components/cards/OrderCard.vue';
   import SingleSheetCost from '@/entities/SingleSheetCost';
   import FabricCostInterface from '@/entities/FabricCostInterface';
+  import SheetFactory from '@/entities/SheetFactory';
 
   const colchaSolteiroMae: FabricCostInterface = new SingleSheetCost(2.20, 1.50, 2.20, 1.55, 30);
+  const lencolFactory: SheetFactoryInterface = new SheetFactory();
+  //const lencol1: FabricCostInterface = lencolFactory.create('SheetBed', 2.20, 1.50, 2.20, 1.55, 30)
   console.log('Single sheet', colchaSolteiroMae)
+  console.log('Lencol 1: ', lencolFactory.create('SheetBed', 2.20, 1.50, 2.20, 1.55, 30))
 </script>
 
 <style scoped>

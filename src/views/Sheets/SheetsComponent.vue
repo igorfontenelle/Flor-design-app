@@ -14,6 +14,7 @@
 <script setup lang="ts">
 import { ref, reactive } from 'vue';
 import SingleSheetCost from '@/entities/SingleSheetCost';
+import SheetFactory from '@/entities/SheetFactory';
 import { IonButton, IonInput } from '@ionic/vue';
 
 let widthPurchased: any = ref('');
@@ -21,8 +22,8 @@ let heightPurchased: any = ref('');
 let fabricPrice: any = ref('');
 
 function addSheet(){
-  const data: any = reactive({sheet: new SingleSheetCost(2.20, 1.50, parseFloat(widthPurchased.value), parseFloat(heightPurchased.value), parseFloat(fabricPrice.value))})
-  console.log('Float: ', parseFloat(widthPurchased.value), typeof(widthPurchased.value))
+  const sheetFactory: SheetFactoryInterface = new SheetFactory();
+  const data: any = reactive({sheet: sheetFactory.create('SheetBed', 2.20, 1.50, parseFloat(widthPurchased.value), parseFloat(heightPurchased.value), parseFloat(fabricPrice.value))})
   let singleSheetsStorage: any = [];
   const localStorageValue = localStorage.getItem('Sheets');
   if (localStorageValue !== null) {
