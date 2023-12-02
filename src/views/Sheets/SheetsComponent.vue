@@ -13,7 +13,6 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue';
-import SingleSheetCost from '@/entities/SingleSheetCost';
 import SheetFactory from '@/entities/SheetFactory';
 import { IonButton, IonInput } from '@ionic/vue';
 
@@ -22,7 +21,7 @@ let heightPurchased: any = ref('');
 let fabricPrice: any = ref('');
 
 function addSheet(){
-  const sheetFactory: SheetFactoryInterface = new SheetFactory();
+  const sheetFactory: any = new SheetFactory();
   const data: any = reactive({sheet: sheetFactory.create('SheetBed', 2.20, 1.50, parseFloat(widthPurchased.value), parseFloat(heightPurchased.value), parseFloat(fabricPrice.value))})
   let singleSheetsStorage: any = [];
   const localStorageValue = localStorage.getItem('Sheets');

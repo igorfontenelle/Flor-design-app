@@ -1,6 +1,8 @@
 import SheetFactoryInterface from './SheetFactoryInterface';
+import FabricCostInterface from './FabricCostInterface';
 import SingleSheetCost from './SingleSheetCost';
 import GloveSheetBed from './GloveSheetBed';
+
 export default class SheetFactory implements SheetFactoryInterface {
     constructor(){}
     create(type: string, widthAreaUsed: number, heightAreaUsed: number, widthAreaPurchased: number, heightAreaPurchased: number, fabricPrice: number): FabricCostInterface {
