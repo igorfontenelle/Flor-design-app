@@ -56,11 +56,17 @@
   import FabricCostInterface from '@/entities/FabricCostInterface';
   import SheetFactoryInterface from '@/entities/SheetFactoryInterface';
   import SheetFactory from '@/entities/SheetFactory';
+  import SingleSheetCostAdapter from '@/entities/adapter/SingleSheetCostAdapter';
+  import SimpleSheetBed from '@/entities/template-methods/SimpleSheetBed';
 
   const colchaSolteiroMae: FabricCostInterface = new SingleSheetCost(2.20, 1.50, 2.20, 1.55, 30);
+  const colchaSolteiroAdapter: any = new SingleSheetCostAdapter(colchaSolteiroMae);
+  const simpleSheet: any = new SimpleSheetBed(2.20, 1.50, 2.20, 1.55, 30);
   let lencolFactory: SheetFactoryInterface = new SheetFactory() as SheetFactoryInterface;
-  //const lencol1: FabricCostInterface = lencolFactory.create('SheetBed', 2.20, 1.50, 2.20, 1.55, 30)
-  console.log('Single sheet', colchaSolteiroMae)
+
+  console.log('Single sheet', colchaSolteiroMae);
+  console.log('Single sheet Adapter', colchaSolteiroAdapter);
+  console.log('Simple Sheet: ', simpleSheet);
   console.log('Lencol 1: ', lencolFactory.create('SheetBed', 2.20, 1.50, 2.20, 1.55, 30))
 </script>
 

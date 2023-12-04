@@ -28,11 +28,11 @@ export default class SingleSheetCost implements FabricCostInterface {
         this.fabricCost.totalCostUsed = this.calculateCostUsed();
 
     }
-    private widthAreaUsed: number;
-    private heightAreaUsed: number;
-    private widthAreaPurchased: number;
-    private heightAreaPurchased: number;
-    private fabricPrice: number;
+    public widthAreaUsed: number;
+    public heightAreaUsed: number;
+    public widthAreaPurchased: number;
+    public heightAreaPurchased: number;
+    public fabricPrice: number;
     public fabricCost: Fabric = {
         areaUsed: 0, 
         areaPurchased: 0, 
